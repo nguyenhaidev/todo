@@ -1,0 +1,42 @@
+.card {
+  width: 100%;
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #ea7f4a;
+  .form {
+    .input {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+.button__primary {
+  border-radius: 10000px;
+  color: white;
+  margin-inline: 10px;
+  border: none;
+  padding-inline: 2em;
+  padding-block: 0.5em;
+  background-color: #0f393b;
+}
+
+.button__secondary {
+  border-radius: 10000px;
+  color: white;
+  border: none;
+  margin-inline: 10px;
+  padding-inline: 2em;
+  padding-block: 0.5em;
+  background-color: #ea7f4a;
+}
+
+.button__add {
+  background-color: #ea7f4a;
+  width: 300px;
+  border-radius: 1000px;
+  border: none;
+  padding-block: 1rem;
+  font-size: 1.2rem;
+  color: white;
+}

@@ -1,0 +1,11 @@
+.taskForm {
+  padding-inline: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .taskForm {
+    padding-inline: 10%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+$primary_color: #ea7f4a;
+$secondary_color: #f6f5ef;
+
+.button__primary {
+  background-color: $primary_color;
+  color: $secondary_color;
+
+  &:hover {
+    background-color: $secondary_color;
+    border: $primary_color solid 1px;
+    color: black;
+  }
+}
+
+.button__secondary {
+  background-color: $secondary_color;
+  color: $primary_color;
+  border: $primary_color solid 1px;
+  color: black;
+
+  &:hover {
+    background-color: #f7b898;
+    border: $secondary_color solid 1px;
+  }
+}
