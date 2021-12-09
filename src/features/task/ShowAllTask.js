@@ -34,20 +34,23 @@ export function ShowTask(props) {
         className="border-bottom"
       >
         <Typography className="row justify-content-start align-items-center w-100 ">
-          <div
+          <span
             className="col text-left"
             style={{ fontSize: 16, fontWeight: "bold" }}
           >
             {title}
-          </div>
+          </span>
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography className="d-flex flex-column align-items-start justify-content-center pl-3">
+        <Typography
+          component="span"
+          className="d-flex flex-column align-items-start justify-content-center pl-3"
+        >
           <div className="row">
-            <div className="col">
+            <span className="col">
               {description ? description : "Chưa cập nhật"}
-            </div>
+            </span>
           </div>
           <div className="d-flex flex-column flex-md-row mt-2 w-100 ">
             <div className="px-1">
@@ -86,41 +89,7 @@ export default function ShowAllTask() {
     <div>
       <ul className="list-group">
         {tasks &&
-          tasks.map((todo) => (
-            <ShowTask {...todo} />
-            // <li key={todo.id} className="row my-1 align-items-center">
-            //   <div className="col justify-content-center row">
-            //     <p className="w-50 text-left">{todo.title}</p>
-            //   </div>
-            //   <div className="col">{moment(todo.id).format("LT L")}</div>
-            //   <div className="col">
-            //     <Checkbox
-            //       checked={todo.completed}
-            //       onChange={() => toggleCheck(todo)}
-            //       sx={{
-            //         color: "white",
-            //         "&.Mui-checked": {
-            //           color: "white",
-            //         },
-            //       }}
-            //     />
-            //   </div>
-            //   <div className="col">
-            //     <button
-            //       className="btn btn-danger"
-            //       onClick={() => deleteTask(todo)}
-            //     >
-            //       Xóa
-            //     </button>
-            //     <button
-            //       className="btn btn-primary"
-            //       onClick={() => togglerEdit(todo)}
-            //     >
-            //       Sửa
-            //     </button>
-            //   </div>
-            // </li>
-          ))}
+          tasks.map((todo, index) => <ShowTask key={index} {...todo} />)}
         {tasks.length === 0 && <h1 className="text-danger">Trống</h1>}
       </ul>
     </div>

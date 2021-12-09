@@ -69,7 +69,7 @@ export default function TaskForm() {
   };
 
   return (
-    <div className="w-100 p-2 d-flex justify-content-center">
+    <div className="w-100 py-2 d-flex justify-content-center">
       <Zoom
         in={!checked}
         style={{
@@ -96,12 +96,6 @@ export default function TaskForm() {
             <CardHeader title={<h1>Thêm nhiệm vụ mới</h1>} />
             <CardContent>
               <form onSubmit={onSubmit} className={style.form}>
-                {/* <input
-                  className={style.input}
-                  type="text"
-                  onChange={onChange}
-                  value={task}
-                /> */}
                 <TextField
                   name="task"
                   error={errorTask === "" ? false : true}
@@ -139,7 +133,6 @@ export default function TaskForm() {
                 </button>
               </div>
             </CardContent>
-            {/* <CardActions disableSpacing></CardActions> */}
           </Card>
         </Box>
       </Zoom>
